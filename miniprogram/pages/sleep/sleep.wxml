@@ -1,0 +1,39 @@
+<!--pages/sleep/sleep.wxml-->
+<!--pages/bloodSugar/bloodSugar.wxml-->
+<view class="top">
+  <view>
+    <text style="font-size: 2.5rem; font-weight: 600; margin: 1rem .3rem .2rem 0rem;" wx:if="{{!lastSleepTime}}">0</text>
+    <text style="font-size: 2rem; font-weight: 600; margin: 1rem .3rem .2rem 0rem;" wx:else>{{lastSleepTime}}</text>
+    <text style="color: rgb(141, 141, 141);">小时</text>
+  </view>
+  <!-- 没有数据 -->
+  <view class="no_message_container" wx:if="{{!lastSleepTime}}">
+    <text style="display: block;">还没有您的睡眠时间记录</text>
+    <text style="color: rgb(156, 156, 156); display: block; margin-top: .5rem;">请输入您的最近一次的睡眠时间, 看看健康顾问怎么说</text>
+  </view>
+  <!-- 建议 -->
+  <view class="message" wx:else>
+    <view style="display: flex; flex-direction: column; background-color: #f7f7f7; padding: 1rem; margin: 2rem 0rem; overflow: {{dom_overflow}}; height: {{dom_height}};">
+      <text style="font-weight: bolder; margin: 0rem 0rem .5rem 0rem; display: inline-block;">{{analyseWeightRes}}</text>
+      <view style="height: .1rem;"></view>
+      {{text}}
+    </view>
+    <view wx:if="{{icon_visible}}" class="develop" bindtap="handleDevelop">
+      <van-icon class="_arrow" name="arrow-down" />
+    </view>
+    <view class="develop" wx:else="{{!icon_visible}}" bindtap="handleDevelopBack">
+      <van-icon class="_arrow" name="arrow-up" />
+    </view>
+  </view>
+
+
+</view>
+<!-- echarts -->
+<view class="echarts_container">
+  <text style="z-index: 10;" class="echarts_title">睡眠时间(h)</text>
+  <sleepTimeEcharts wx:if="{{echartsVisible}}"></sleepTimeEcharts>
+</view>
+<!-- btn -->
+<entryBtn content="输入睡眠时间" bindtap="handleAddSleepTime"></entryBtn>
+
+<van-notify id="van-notify" />

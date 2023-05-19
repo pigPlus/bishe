@@ -1,0 +1,8 @@
+<!--pages/weight/addWeight/addWeight.wxml-->
+<van-cell-group>
+  <van-field label="血糖" value="{{ bloodSugar }}" placeholder="请输入{{'(' + 'mmol/L' + ')'}}" border="{{ false }}" bind:change="onChangeSugar" />
+  <my-date-picker currentDate bind:datePickerChange="onDatePickerChange" />
+</van-cell-group>
+<view style="margin-top: 5rem;">
+  <entryBtn bindtap="handleAddData" content="保存"></entryBtn>
+</view>

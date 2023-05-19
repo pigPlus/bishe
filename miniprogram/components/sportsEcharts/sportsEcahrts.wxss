@@ -1,0 +1,15 @@
+/* components/sportsEcharts/sportsEcahrts.wxss */
+.ec-container {
+  width: 100%;
+  height: 20rem;
+  margin-top: 3rem;
+  background-color: #ffffff;
+  /* position: relative;
+  left: 50%;
+  transform: translateX(-50%); */
+}
+
+ec-canvas {
+  width: 20rem;
+  height: 20rem;
+}

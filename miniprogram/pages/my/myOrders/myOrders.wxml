@@ -1,0 +1,26 @@
+<view wx:if="{{orderList.length}}">
+  <view class="orderList" wx:for="{{orderList}}" wx:key="index" data-item="{{item}}">
+    <view class="goodsList" wx:for="{{item.list}}" wx:key="index">
+      <view class="name">
+        {{item.name}}
+      </view>
+      <view class="optionName">
+        {{item.option.name}}
+      </view>
+      <view class="optionNum">
+        {{'数量: ' + item.num}}
+      </view>
+    </view>
+    <view class="btn">
+      <!-- <van-button custom-class="custom-class" plain type="primary">申请售后</van-button> -->
+      <van-button custom-class="custom-class" color="red" plain bindtap="deleteOrder" data-id="{{item._id}}">删除订单</van-button>
+    </view>
+  </view>
+
+  <van-dialog id="van-dialog" />
+</view>
+<view class="onOrder" wx:else="{{!orderList.length}}">
+<view class="onOrder_text">
+  还没有订单哦~
+</view>
+</view>

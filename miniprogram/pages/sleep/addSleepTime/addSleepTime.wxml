@@ -1,0 +1,10 @@
+<!--pages/sleep/addSleepTime/addSleepTime.wxml-->
+<van-cell-group>
+  <van-field label="睡眠时间" value="{{ sleepTime }}" placeholder="请输入{{'(' + '小时' + ')'}}" border="{{ false }}" bind:change="onChangeSleepTime" />
+  <my-date-picker currentDate bind:datePickerChange="onDatePickerChange" />
+</van-cell-group>
+
+
+<view style="margin-top: 5rem;">
+  <entryBtn bindtap="handleAddData" content="保存"></entryBtn>
+</view>

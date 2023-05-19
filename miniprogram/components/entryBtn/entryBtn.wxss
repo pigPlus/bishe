@@ -1,0 +1,14 @@
+/* components/entryBtn/entryBtn.wxss */
+.entry_container {
+  /* background-image: linear-gradient(to right, #00b26a, #71cc69); */
+  background-color: #00b26a;
+  width: 80%;
+  height: 3rem;
+  margin-left: 2.5rem;
+  border-radius: 10rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #ffffff;
+  font-size: 1.1rem;
+}

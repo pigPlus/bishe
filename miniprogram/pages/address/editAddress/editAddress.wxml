@@ -1,0 +1,14 @@
+<!--pages/address/editAddress/editAddress.wxml-->
+<view>
+  <van-cell-group>
+    <van-field value="{{ addressVal }}" placeholder="请输入地址" border="{{ false }}" bind:change="onaddressValChange" />
+    <van-field value="{{ nameVal }}" placeholder="请输入收件人姓名" border="{{ false }}" bind:change="onnameValChange" />
+    <van-field value="{{ phoneVal }}" placeholder="请输入收件人电话" border="{{ false }}" bind:change="onphoneValChange" />
+  </van-cell-group>
+  <view class="kong" style="height: 2rem;"></view>
+  <entryBtn content="确定" bindtap="submit"></entryBtn>
+  <view class="kong" style="height: 2rem;"></view>
+  <entryBtn content="删除" bindtap="delete"></entryBtn>
+  <van-notify id="van-notify" />
+  <van-dialog id="van-dialog" />
+</view>

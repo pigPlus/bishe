@@ -1,0 +1,10 @@
+<!--pages/my/ConsultationRecord/ConsultationRecordDetail/ConsultationRecordDetail.wxml-->
+<view class="msgList" wx:for="{{list}}" wx:key="index">
+  <view class="msg-item">
+    <van-icon custom-class="icon-class-left" name="play" />
+    {{item.msg}}
+  </view>
+</view>
+<view style="height: 5rem;" class="gap">
+
+</view>

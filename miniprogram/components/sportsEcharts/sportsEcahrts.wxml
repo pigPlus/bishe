@@ -1,0 +1,4 @@
+<!--components/sportsEcharts/sportsEcahrts.wxml-->
+<view class="ec-container">
+  <ec-canvas id="mychart-dom-line" canvas-id="echart-line" ec="{{ec}}"></ec-canvas>
+</view>

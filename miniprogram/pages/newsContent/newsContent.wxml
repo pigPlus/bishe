@@ -1,0 +1,21 @@
+<!--pages/newsContent/newsContent.wxml-->
+<view class="content_wrap">
+  <view class="content_title">
+    {{content['文章标题']}}
+  </view>
+  <view class="content_time">
+    {{content['发布时间']}}
+  </view>
+  <view class="content_short">
+    {{content['文章摘要']}}
+  </view>
+  <view class="content">
+    {{content['文章正文']}}
+  </view>
+  <view class="footer">
+    <button open-type="share">
+      分享
+    </button>
+  </view>
+
+</view>

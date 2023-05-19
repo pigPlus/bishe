@@ -1,0 +1,14 @@
+/* components/bloodPressureEcharts/PressureEcharts.wxss */
+/* components/sugarEcharts/sugarEcharts.wxss */
+.ec-container {
+  width: 100%;
+  height: 20rem;
+  margin-top: 3rem;
+  background-color: #ffffff;
+
+}
+
+ec-canvas {
+  width: 20rem;
+  height: 20rem;
+}

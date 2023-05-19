@@ -1,0 +1,5 @@
+<!--pages/index/doctorList/doctorList.wxml-->
+<!-- 快速问诊科室分类 -->
+<van-tree-select content-active-class="content-active-class" items="{{ items }}" main-active-index="{{ mainActiveIndex }}" active-id="{{ activeId }}" bind:click-nav="onClickNav" bind:click-item="onClickItem" main-active-class="main-active-class" height="{{ '100vh' }}" />
+<!-- ai-chat -->
+<image class="ai-chat" src="https://6c78-lx-cloud-7g15zrsid49e161d-1316935110.tcb.qcloud.la/8_8%E4%BA%BA%E5%B7%A5%E6%99%BA%E8%83%BD%20(1).png?sign=15fffdb194e70229b906959b4c466ac9&t=16824995829" mode="widthFix" bindtap="toAiChat" />

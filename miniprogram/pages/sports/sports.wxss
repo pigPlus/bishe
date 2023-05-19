@@ -1,0 +1,11 @@
+/* pages/sports/sports.wxss */
+.number_message {
+  background-color: #ffffff;
+  height: 8rem;
+}
+
+.number {
+  width: 100%;
+  height: 5rem;
+  background-color: red;
+}

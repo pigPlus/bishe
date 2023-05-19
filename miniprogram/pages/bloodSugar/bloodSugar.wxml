@@ -1,0 +1,37 @@
+<!--pages/bloodSugar/bloodSugar.wxml-->
+<view class="top">
+  <van-notify id="van-notify" />
+  <view>
+    <text style="font-size: 2rem; font-weight: 600; margin: 1rem 2rem .2rem 2rem; display: block;" wx:if="{{!lastSugar}}">--</text>
+    <text style="font-size: 2rem; font-weight: 600; margin: 1rem 2rem .2rem 2rem; display: block;" wx:else>{{lastSugar}}</text>
+    <text style="display: block; color: rgb(141, 141, 141);">血糖(mmol/L)</text>
+  </view>
+  <!-- 没有血糖数据 -->
+  <view class="no_message_container" wx:if="{{!lastSugar}}">
+    <text style="display: block;">还没有您的血糖记录</text>
+    <text style="color: rgb(156, 156, 156); display: block; margin-top: .5rem;">请输入您的血糖数据, 看看健康顾问怎么说</text>
+
+  </view>
+  <!-- 建议 -->
+  <view class="message" wx:else>
+    <view style="display: flex; flex-direction: column; background-color: #f7f7f7; padding: 1rem; margin: 2rem 0rem; overflow: {{dom_overflow}}; height: {{dom_height}};">
+      <text style="font-weight: bolder; margin: 0rem 0rem .5rem 0rem; display: inline-block;">{{analyseRes}}</text>
+      <view style="height: .1rem;"></view>
+      {{text}}
+    </view>
+    <view wx:if="{{icon_visible}}" class="develop" bindtap="handleDevelop">
+      <van-icon class="_arrow" name="arrow-down" />
+    </view>
+    <view class="develop" wx:else="{{!icon_visible}}" bindtap="handleDevelopBack">
+      <van-icon class="_arrow" name="arrow-up" />
+    </view>
+  </view>
+</view>
+<!-- echarts -->
+<view class="echarts_container">
+  <text class="echarts_title">血糖(mmol/L)</text>
+  <sugarEcharts wx:if="{{echartsVisible}}"></sugarEcharts>
+  <!--  wx:if="{{echartsVisible}}" -->
+</view>
+<!-- btn -->
+<entryBtn content="输入血糖" bindtap="handleAddSugar"></entryBtn>

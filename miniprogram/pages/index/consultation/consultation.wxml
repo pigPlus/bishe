@@ -1,0 +1,28 @@
+<!--pages/index/consultation/consultation.wxml-->
+<!-- 对话页面 -->
+<view class="msgList" wx:for="{{lastMsgList}}" wx:key="index">
+  <view class="msg-item">
+    <van-icon custom-class="icon-class-left" name="play" />
+    {{item.msg}}
+  </view>
+</view>
+<view style="height: 5rem;" class="gap">
+
+</view>
+<view class="chat-input-wrap">
+  <van-field value="{{ value }}" placeholder="请输入内容" border="{{ false }}" bind:change="onChange" input-class="input-class" />
+  <van-button custom-class="custom-class" class="chat-btn" type="primary" bindtap="send">发送</van-button>
+</view>
+
+<!-- <button bindtap="getWebsocket">
+  点击
+</button>
+<van-cell-group>
+  <van-field value="{{ value }}" placeholder="请输入" border="{{ false }}" bind:change="onChange" />
+</van-cell-group>
+<button bindtap="send">
+  发送
+</button>
+<button bindtap="close">
+  关闭
+</button> -->

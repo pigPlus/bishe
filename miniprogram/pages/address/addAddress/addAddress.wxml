@@ -1,0 +1,10 @@
+<!--pages/address/addAddress/addAddress.wxml-->
+<view>
+  <van-cell-group>
+    <van-field value="{{ addressVal }}" placeholder="请输入地址" border="{{ false }}" bind:change="onaddressValChange" />
+    <van-field value="{{ nameVal }}" placeholder="请输入收件人姓名" border="{{ false }}" bind:change="onnameValChange" />
+    <van-field value="{{ phoneVal }}" placeholder="请输入收件人电话" border="{{ false }}" bind:change="onphoneValChange" />
+  </van-cell-group>
+  <entryBtn content="确定" bindtap="submit"></entryBtn>
+  <van-notify id="van-notify" />
+</view>

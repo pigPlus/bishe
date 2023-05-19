@@ -1,0 +1,99 @@
+<!--pages/goodsDetail/goodsDetail.wxml-->
+<view class="good_detail_wrap">
+  <!-- 图片 -->
+  <view class="_image">
+    <image src="{{goodsDetail.url}}" mode="aspectFit" />
+  </view>
+  <!-- 价格, 参数 -->
+  <view class="price_options public">
+    <text style="color: #00b26a;">{{'￥'}}</text>
+    <text class="option_price">{{ chooseOption.price}}</text>
+    <view style="margin-top: .5rem;">{{goodsDetail.name}}
+      <text class="option_name">{{chooseOption.name}}</text>
+    </view>
+  </view>
+  <!-- 发货地址, 收获地址, 选择参数 -->
+  <view class="otherMsg public">
+    <view class="choose" bindtap="handleChoose">
+      <text class="title_public">{{'选择'}}</text>
+      <text style="background-color: rgba(233, 229, 229, .6); border-radius: .2rem; padding: .2rem; text-align: center;">{{chooseOption.name}}</text>
+      <van-icon style="position: absolute; right: .2rem; margin-top: .55rem; color: rgba(129, 129, 129, .7);" name="arrow" />
+    </view>
+    <view class="from">
+      <text class="title_public">{{'发货'}}</text>
+      <text>{{goodsDetail.from}}</text>
+    </view>
+    <view class="cost">
+      <text class="title_public">{{'运费'}}</text>
+      <text>{{cost}}</text>
+    </view>
+    <view class="service">
+      <text class="title_public">{{'服务'}}</text>
+      <text class="goodsDetail_service" wx:for="{{goodsDetail.service}}" wx:key="index">{{item}}</text>
+    </view>
+  </view>
+  <!-- 弹出层 -->
+  <van-action-sheet show="{{ show }}" actions="{{ options }}" bind:close="onClose" bind:select="onSelect" />
+  <!-- 详情 -->
+  <view class="line">
+
+  </view>
+  <view style="text-align: center; background-color: #ffffff;">
+    <text style="font-size: 1.1rem; color: rgb(75, 74, 74);">{{'详情'}}</text>
+    <van-icon style="transform: rotate(90deg);" name="play" />
+  </view>
+
+  <view class="detailImage">
+
+    <image wx:for="{{imgUrlArr}}" wx:key="index" src="{{item}}" mode="widthFix" />
+  </view>
+  <!-- 加入购物车 -->
+  <van-goods-action custom-class="custom-class">
+    <!-- <van-goods-action-icon icon="chat-o" text="客服" bindtap="customerService" /> -->
+    <van-goods-action-icon bindtap="toCart" icon="cart-o" text="购物车" info="{{goodsNum}}" />
+    <van-goods-action-button bindtap="addGoodsToCart" color="#00b26a" text="加入购物车" />
+    <!-- <van-goods-action-button color="#00b26a" text="立即购买" bindtap="immediate" /> -->
+  </van-goods-action>
+  <!-- 购物车弹框 -->
+  <!-- <van-action-sheet show="{{ cartShow }}" actions="{{ inCartOptions }}" bind:close="onCartClose" bind:select="onCartSelect" /> -->
+
+  <van-action-sheet show="{{ cartShow }}" bind:close="onCartClose" bind:select="onCartSelect">
+    <view class="cart-goods" wx:for="{{inCartOptions}}" wx:key="index">{{item.name}}
+      <view class="option-wrap">
+        <view class="option-name option-public">{{item.option.name}}
+        </view>
+        <view style="display: flex; position: relative;">
+          <view class="option-price option-public">{{'￥' + item.option.price}}
+          </view>
+          <!-- 数量 -->
+          <view class="_num option-public">
+            <van-stepper integer min="1" value="{{ item.num }}" bind:change="onStepperChange" data-singlePrice="{{item.option.price}}" data-name="{{item.name}}" data-optionName="{{item.option}}" bind:plus="handleAdd" bind:minus="handleReduce" bind:overlimit="handleLimit" />
+            <!-- {{item.num}} -->
+          </view>
+        </view>
+
+      </view>
+    </view>
+    <!-- 提交订单 -->
+    <view class="submit">
+      <van-submit-bar price="{{ totalPrice * 100 }}" button-text="结算" bind:submit="onSubmit" price-class="price-class" button-class="button-class" loading="{{loading}}" />
+    </view>
+
+  </van-action-sheet>
+  <!-- 立即购买弹窗 -->
+  <!-- <van-action-sheet show="{{ immediateShow }}" actions="{{ immediateActions }}" bind:close="onimmediateClose" bind:select="onimmediateSelect" /> -->
+  <van-action-sheet show="{{ immediateShow }}" bind:close="onimmediateClose" bind:select="onimmediateSelect">
+    <view class="immediate-wrap">
+      <view class="name">
+        {{goodsDetail.name}}
+      </view>
+      <view class="price">
+        {{chooseOption.price}}
+      </view>
+      <view class="num">
+        {{goodsDetail.cartNum}}
+      </view>
+    </view>
+  </van-action-sheet>
+  <van-dialog id="van-dialog" />
+</view>

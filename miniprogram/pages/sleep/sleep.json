@@ -1,0 +1,6 @@
+{
+  "usingComponents": {
+    "sleepTimeEcharts": "../../components/sleepTimeEcharts/sleepTimeEcharts",
+    "entryBtn": "../../components/entryBtn/entryBtn"
+  }
+}

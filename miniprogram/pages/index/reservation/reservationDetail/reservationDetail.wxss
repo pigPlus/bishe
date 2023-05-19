@@ -1,0 +1,28 @@
+/* pages/index/reservation/reservationDetail/reservationDetail.wxss */
+.address-hospital {
+  background-color: #ffffff;
+  padding: 1rem;
+}
+
+.hospital {
+  font-size: 1.5rem;
+  font-weight: 700;
+  margin-bottom: .5rem;
+}
+
+.address {
+  color: rgb(109, 108, 108);
+}
+
+.date-list {
+  background-color: #ffffff;
+  padding: 1.5rem;
+  border-top: .05rem solid rgb(223, 222, 222);
+  position: relative
+}
+
+.btn-custom-class {
+  position: absolute !important;
+  right: 1rem !important;
+  margin-top: -.6rem;
+}

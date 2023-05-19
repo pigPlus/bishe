@@ -1,0 +1,12 @@
+<!--pages/weight/addWeight/addWeight.wxml-->
+<van-cell-group>
+  <van-field label="体重" value="{{ weight }}" placeholder="请输入{{'(' + 'kg' + ')'}}" border="{{ false }}" bind:change="onChangeWeight" />
+
+  <van-field label="身高" value="{{ high }}" placeholder="请输入{{'(' + 'cm' + ')'}}" border="{{ false }}" bind:change="onChangeHigh" />
+
+  <my-date-picker currentDate bind:datePickerChange="onDatePickerChange" />
+
+</van-cell-group>
+<view style="margin-top: 5rem;">
+  <entryBtn bindtap="handleAddData" content="保存"></entryBtn>
+</view>

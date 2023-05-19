@@ -1,0 +1,9 @@
+<!--pages/sports/sports.wxml-->
+<view class="number_message">
+  <view class="number">
+
+  </view>
+  <view class="message">
+
+  </view>
+</view>

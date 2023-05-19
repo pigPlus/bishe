@@ -1,0 +1,14 @@
+.price-class {
+  color: #00b26a !important;
+}
+
+._search {
+  padding: 0rem .7rem;
+  background-color: #ffffff;
+}
+
+.noDrug {
+  color: rgb(143, 142, 142);
+  text-align: center;
+  margin-top: 10rem;
+}

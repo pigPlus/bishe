@@ -1,0 +1,43 @@
+<!--pages/bloodPressure/bloodPressure.wxml-->
+<view>
+  <van-notify id="van-notify" />
+  <view class="number_message">
+    <view class="number">
+      <view class="num1 num_public">
+        {{lastBloodPressureLow}}
+        <text class="unit_public">收缩压{{'(' + 'mmHg' + ')'}}</text>
+      </view>
+      <text class="gap">|</text>
+      <view class="num2 num_public">
+        {{lastBloodPressureHigh}}
+        <text class="unit_public">舒张压{{'(' + 'mmHg' + ')'}}</text>
+      </view>
+      <text class="gap">|</text>
+      <view class="num3 num_public">
+        {{lastHeartRate}}
+        <text class="unit_public">心率{{'(' + '次/分' + ')'}}</text>
+      </view>
+    </view>
+    <!-- 建议 -->
+    <view class="message">
+      <view style="display: flex; flex-direction: column; background-color: #f7f7f7; padding: 1rem; margin: 2rem 0rem; overflow: {{dom_overflow}}; height: {{dom_height}};">
+        <text style="font-weight: bolder; margin: 0rem 0rem .5rem 0rem; display: inline-block;">{{analyseRes}}</text>
+        <view style="height: .1rem;"></view>
+        {{text}}
+      </view>
+      <view wx:if="{{icon_visible}}" class="develop" bindtap="handleDevelop">
+        <van-icon class="_arrow" name="arrow-down" />
+      </view>
+      <view class="develop" wx:else="{{!icon_visible}}" bindtap="handleDevelopBack">
+        <van-icon class="_arrow" name="arrow-up" />
+      </view>
+    </view>
+  </view>
+
+  <view class="echarts_container">
+    <!-- echarts -->
+    <bloodPressureEcharts wx:if="{{echartsVisible}}"></bloodPressureEcharts>
+  </view>
+
+  <entryBtn content="录入血压" bindtap="addPressure"></entryBtn>
+</view>

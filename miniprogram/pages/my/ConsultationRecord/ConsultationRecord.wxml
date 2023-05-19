@@ -1,0 +1,17 @@
+<view wx:if="{{msgList.length}}">
+  <view class="orderList" wx:for="{{msgList}}" wx:key="index" data-item="{{item}}">
+    <view class="goodsList" data-id="{{item._id}}" bindtap="handleMsgDetail">
+      {{item.doctor}}
+    </view>
+    <view class="btn">
+      <van-button custom-class="custom-class" color="red" plain bindtap="deleteMsg" data-id="{{item._id}}">删除记录</van-button>
+    </view>
+  </view>
+
+  <van-dialog id="van-dialog" />
+</view>
+<view class="onOrder" wx:else="{{!orderList.length}}">
+  <view class="onOrder_text">
+    还没有问诊记录哦~
+  </view>
+</view>

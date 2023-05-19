@@ -1,0 +1,6 @@
+{
+  "usingComponents": {
+    "entryBtn": "../../components/entryBtn/entryBtn",
+    "bloodPressureEcharts": "../../components/bloodPressureEcharts/PressureEcharts"
+  }
+}

@@ -1,0 +1,145 @@
+<!--pages/health/health.wxml-->
+<!-- 体重应该从data里的userMsg获取, 现在是从app获取的, 只是为了调试方便 -->
+<view class="container">
+  <!-- 去登录 -->
+  <view class="toLogin" bindtap="toLogin" wx:if="{{toLoginVisible}}">
+    <text class="toLoginTitle">
+      您还没有登录哦, 抓紧去登录~
+    </text>
+  </view>
+  <!-- 遮罩层 -->
+  <view class="mask" wx:if="{{toLoginVisible}}"></view>
+
+  <view class="top">
+    <view class="title">
+      健康档案
+    </view>
+    <view class="th">
+      开启记录, 让健康有迹可循
+    </view>
+  </view>
+  <!-- 绿卡片 -->
+  <view class="new_message">
+    <!-- 隐藏前 -->
+    <view class="new_built" bindtap="handleBuilt" wx:if="{{newMsgShow}}">
+      <van-icon name="plus" />
+      <text>新建档案</text>
+    </view>
+    <!-- 隐藏后 -->
+    <view class="new_built_msg" bindtap="toEdit">
+      <view class="username">
+        {{storageValue.username}}
+      </view>
+      <view class="sex">
+        {{storageValue.sex}}
+      </view>
+      <view class="age">
+        {{storageValue.birth}}
+      </view>
+    </view>
+    <view class="arrowhead"></view>
+  </view>
+  <!-- 图表展示 -->
+  <view class="z_message">
+    <view class="columns">
+      <view style="margin-right: 1.8rem;" class="weight public_class" bindtap="toweightPage">
+        <view class="ti">
+          <text class="weight_title">体重</text>
+          <van-icon color="#bdbaba" style="margin-top: .3rem; margin-left: .5rem;" name="arrow" />
+        </view>
+        <view class="weight_sum">
+          <text class="weight_sum_m">{{lastWeight}}</text>
+          <text class="weight_sum_unit">{{'kg'}}</text>
+        </view>
+        <view class="bmi_sum">
+          <text class="bmi_sum_m">
+            {{bmi}}
+          </text>
+          <text class="bmi_sum_unit">
+            {{ 'BMI'}}
+          </text>
+        </view>
+      </view>
+      <view style="margin-left: -.1rem;" class="sleep public_class" bindtap="tosleepPage">
+        <view class="ti">
+          <text class="weight_title">睡眠</text>
+          <van-icon color="#bdbaba" style="margin-top: .3rem; margin-left: .5rem;" name="arrow" />
+        </view>
+        <view class="sport_sum">
+          <text class="sport_sum_m">{{lastSleepTime}}</text>
+          <text class="weight_sum_unit">{{'h'}}</text>
+        </view>
+      </view>
+    </view>
+    <view class="columns">
+      <view style="margin-right: 1.8rem;" class="bloodSugar public_class" bindtap="toBloodSugarPage">
+        <view class="ti">
+          <text class="weight_title">血糖</text>
+          <van-icon color="#bdbaba" style="margin-top: .3rem; margin-left: .5rem;" name="arrow" />
+        </view>
+        <view class="sport_sum">
+          <text class="sport_sum_m">{{lastSugar}}</text>
+          <text class="weight_sum_unit">{{'mmol/L'}}</text>
+        </view>
+      </view>
+      <view style="margin-left: -.1rem;" class="bloodPressure public_class" bindtap="toBloodPressurePage">
+        <view class="ti">
+          <text class="weight_title">血压</text>
+          <van-icon color="#bdbaba" style="margin-top: .3rem; margin-left: .5rem;" name="arrow" />
+        </view>
+        <view class="sport_sum">
+          <text class="sport_sum_m">{{lastBloodPressureLow + '/' + lastBloodPressureHigh}}</text>
+          <text class="weight_sum_unit">{{'mmHg'}}</text>
+        </view>
+      </view>
+    </view>
+  </view>
+  <!-- 这是个问题, 遮罩层不能全屏 -->
+  <!-- <view style="height: 50rem; background-color: aliceblue;" class="ll">
+
+  </view> -->
+</view>
+
+<!-- 发帖 -->
+<!-- <view class="__title">
+  社区
+  <text class="__content">话题热聊中, 就差你了~</text>
+</view>
+<view class="posts-list">
+  <view class="posts-list-title" wx:for="{{postList}}" wx:key="index">
+    <view class="posts">
+      {{item.posts}}
+      <view class="follows" wx:for="{{item.follows}}" wx:key="index">
+        <view>
+          <van-icon name="smile-o" />
+          {{item.posts}}
+        </view> -->
+<!-- <view class="follows" wx:for="{{item.follows}}">
+          <view>
+            <van-icon name="smile-o" />
+            {{item.posts}}
+          </view>
+          <view class="follows" wx:for="{{item.follows}}">
+            <view>
+              <van-icon name="smile-o" />
+              {{item.posts}}
+            </view>
+          </view>
+        </view> -->
+<!-- </view>
+    </view> -->
+
+<!-- <view class="comment-icon" bindtap="toCommit" data-item="{{item}}">
+      <van-icon name="comment-o" color="rgb(121, 116, 116)" />
+    </view> -->
+<!-- 评论框 -->
+<!-- <van-field wx:if="{{isInputShow}}" class="__input" value="{{ inputValue }}" placeholder="请输入内容" border="{{ false }}" bind:change="onInputChange" />
+    <van-button class="__btn" wx:if="{{isInputShow}}" size="small" type="primary" plain bindtap="cancelCommit">取消</van-button>
+    <van-button class="__btn" wx:if="{{isInputShow}}" size="small" type="primary" bindtap="Commit" data-item="{{item}}">评论</van-button>
+  </view>
+</view>
+<view class="addPost">
+  <van-button plain type="primary" custom-class="custom-class-btn">发帖
+    <van-icon name="edit" />
+  </van-button>
+</view> -->

@@ -1,0 +1,31 @@
+<!--pages/index/reservation/reservationDetail/process/process.wxml-->
+<view class="wrap">
+  <textarea class="_textarea" value="{{value}}" bindinput="onTextareaInput" placeholder="请先简单描述您的病情" />
+  <!-- <view class="upload-img">
+    <van-uploader max-count="2" file-list="{{ fileList }}" bindtap="uploadImg" />
+    <text class="upload-img-text">添加图片(化验单, 检查报告)</text>
+  </view> -->
+  <view class="address-date">
+    <text class="title">就诊时间地点</text>
+    <view class="address">
+      {{item.hospital}}
+    </view>
+    <view class="addressDetail">
+      {{item.hospitalAddress}}
+    </view>
+    <view class="date">
+      {{date}}
+    </view>
+  </view>
+  <view class="userMsg">
+    <van-cell-group>
+      <van-field label="手机号" value="{{ phoneVal }}" placeholder="请输入手机号" border="{{ false }}" bind:change="onPhoneValChange" />
+    </van-cell-group>
+    <van-cell-group>
+      <van-field label="就诊人" value="{{ userVal }}" placeholder="请输入就诊人姓名" border="{{ false }}" bind:change="onUserValChange" />
+    </van-cell-group>
+  </view>
+  <!-- submit -->
+  <entryBtn class="entryBtn" content="提交" bindtap="submit"></entryBtn>
+  <van-notify id="van-notify" />
+</view>

@@ -1,0 +1,14 @@
+<!--pages/index/reservation/reservationDetail/reservationDetail.wxml-->
+<view class="address-hospital">
+  <view class="hospital">
+    {{item.hospital}}
+  </view>
+  <view class="address">
+    {{item.hospitalAddress}}
+  </view>
+</view>
+<!-- date -->
+<view class="date-list" wx:for="{{item.date}}" wx:key="index">
+  {{item}}
+  <van-button custom-class="btn-custom-class" color="#00b26a" bindtap="toReservation" data-date="{{item}}">预约</van-button>
+</view>

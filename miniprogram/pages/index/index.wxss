@@ -1,0 +1,135 @@
+/**index.wxss**/
+
+.container {
+  width: 100%;
+}
+
+.top {
+  width: 100%;
+  height: 10rem;
+  display: flex;
+  margin-top: 1rem;
+}
+
+.left {
+  flex: 1;
+}
+
+.fast_inquiry {
+  background-color: rgba(0, 197, 205, .1);
+  /* background: linear-gradient(to bottom, rgba(0, 197, 205, .3), #ffffff); */
+  height: 70%;
+  margin: 1rem 1rem;
+  border-radius: .5rem;
+  font-size: 1.7rem;
+  font-weight: bold;
+  padding: .5rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.appointment_consultation {
+  background-color: rgba(255, 100, 47, .1);
+  height: 25%;
+  margin: 1rem 0;
+  border-radius: .5rem;
+  font-size: 1.3rem;
+  font-weight: 600;
+  padding: .5rem;
+  display: flex;
+  align-items: center;
+}
+
+.right {
+  flex: 1;
+}
+
+.to_shop {
+  background-color: rgba(255, 206, 53, .1);
+  height: 25%;
+  margin: 1rem 0;
+  border-radius: .5rem;
+  font-size: 1.3rem;
+  font-weight: 600;
+  padding: .5rem;
+  display: flex;
+  align-items: center;
+}
+
+.myTab {
+  margin: 0rem 1.2rem;
+}
+
+.newsPanel {
+  width: 100%;
+  background-color: #ffffff;
+}
+
+.panel_item {
+  position: relative;
+  background-color: #ffffff;
+  height: 6rem;
+  border-top: .5px solid rgb(238, 237, 237);
+  /* margin-top: -0.5px; */
+  /* display: flex; */
+}
+
+/* .article_img {
+  width: 5rem;
+  height: 3rem;
+} */
+
+.article_title {
+  margin: 1rem 2rem 1rem 1rem;
+  display: -webkit-box;
+  /* 设置为弹性布局 */
+  -webkit-box-orient: vertical;
+  /* 垂直方向排列 */
+  -webkit-line-clamp: 2;
+  /* 限制只显示两行 */
+  overflow: hidden;
+  /* 超出部分隐藏 */
+  text-overflow: ellipsis;
+  /* 使用省略号代替超出部分 */
+}
+
+.ty {
+  display: inline;
+  color: rgb(199, 197, 197);
+  margin: 0rem 0rem 1rem 1rem;
+}
+
+.ti {
+  display: inline;
+  color: rgb(199, 197, 197);
+  margin: 0rem 0rem 1rem 1rem;
+}
+
+.other_msg {
+  position: absolute;
+  bottom: .5rem;
+  left: 0;
+}
+
+.icon-1 {
+  display: inline-block;
+  width: 2.5rem;
+  height: 2.5rem;
+  margin-left: .7rem;
+}
+
+.icon-2 {
+  display: inline-block;
+  width: 2.5rem;
+  height: 2.5rem;
+  margin-left: .7rem;
+}
+
+.icon-3 {
+  display: inline-block;
+  width: 5rem;
+  height: 5rem;
+  /* margin-left: 1rem; */
+}

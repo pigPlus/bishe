@@ -1,0 +1,22 @@
+<!--pages/my/my.wxml-->
+<view class="my_container">
+  <div class="login_wrap" bindtap="login" wx:if="{{visible}}">
+    <view class="iconfont icon-weixin"></view>
+    <text>微信登录</text>
+  </div>
+  <view class="user_wrap" wx:else>
+    <image class="avatarUrl" src="../../images/未登录.jpeg" mode="" />
+    <image wx:if="{{avatarUrlVisible}}" class="loginAvatarUrl" src="{{userInfo.avatarUrl}}" mode="" />
+    <view class="nickname">
+      {{userInfo.nickName}}
+    </view>
+  </view>
+  <!-- 地址管理 -->
+  <van-cell wx:if="{{avatarUrlVisible}}" is-link title="地址管理" link-type="navigateTo" url="/pages/address/address" />
+  <!-- 订单管理 -->
+  <van-cell wx:if="{{avatarUrlVisible}}" is-link title="我的订单" link-type="navigateTo" url="/pages/my/myOrders/myOrders" />
+  <!-- 问诊记录 -->
+  <van-cell wx:if="{{avatarUrlVisible}}" is-link title="问诊记录" link-type="navigateTo" url="/pages/my/ConsultationRecord/ConsultationRecord" />
+  <!-- 预约 -->
+  <van-cell wx:if="{{avatarUrlVisible}}" is-link title="我的预约" link-type="navigateTo" url="/pages/my/MyAppointment/MyAppointment" />
+</view>

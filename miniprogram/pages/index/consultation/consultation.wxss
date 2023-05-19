@@ -1,0 +1,82 @@
+/* pages/index/consultation/consultation.wxss */
+.chat-input-wrap {
+  width: 100%;
+  height: 2rem;
+  padding: 1rem;
+  background-color: #ffffff;
+  position: fixed;
+  bottom: 0;
+  display: flex;
+  align-items: center;
+  /* justify-content: center; */
+  overflow: hidden;
+}
+
+.input-class {
+  background-color: rgba(214, 212, 212, .2) !important;
+  height: 2.5rem !important;
+  width: 18rem !important;
+  border-radius: .2rem !important;
+}
+
+.custom-class {
+  width: 5rem !important;
+  height: 2.5rem !important;
+}
+
+.chat-btn {
+  position: absolute;
+  right: 3rem;
+}
+
+.msg-item {
+  display: inline-block;
+  background-color: #07c160;
+  margin: 1rem;
+  padding: 1rem 1rem 1rem 1rem;
+  border-radius: .2rem;
+}
+
+.msg-item2 {
+  display: inline-block;
+  background-color: red;
+  margin: 1rem;
+  padding: 1rem 1rem 1rem 1rem;
+  border-radius: .2rem;
+}
+
+.msgList {
+  position: relative;
+  max-width: 100vw;
+  overflow: hidden;
+}
+
+.msgList2 {
+  position: relative;
+  max-width: 100vw;
+  overflow: hidden;
+  background-color: blue;
+}
+
+.icon-class-left {
+  /* left */
+  position: absolute !important;
+  transform: rotate(180deg);
+  left: 0.4rem !important;
+  top: 2rem;
+  color: #07c160;
+}
+
+.icon-class-right {
+  /* right*/
+  position: absolute !important;
+  color: #07c160;
+  top: 2rem;
+  right: 0.4rem;
+}
+
+.ai-chat {
+  position: fixed;
+  width: 3rem;
+  height: 3rem;
+}

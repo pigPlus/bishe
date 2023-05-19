@@ -1,0 +1,102 @@
+<!--pages/newBuilt/newBuilt.wxml-->
+<!-- 提示 -->
+<van-notify id="van-notify" />
+<!-- 必填项 -->
+<!-- 用户名 -->
+<text class="require">以下为必填项</text>
+<text class="must">{{'*'}}</text>
+<van-field value="{{ username }}" clearable label="姓名" placeholder="请输入用户名" bind:change="onChangeUsername" />
+<!-- 性别 -->
+<van-radio-group value="{{ radio }}" bind:change="onChange">
+  <text class="sex_lable">性别</text>
+  <van-radio checked-color="#00b26a" name="男">男</van-radio>
+  <van-radio checked-color="#00b26a" name="女">女</van-radio>
+</van-radio-group>
+<!-- 出生日期 -->
+<van-field clearable label="出生日期" value="{{ date }}" bindtap="onDisplay" placeholder="请选择出生日期" readonly />
+<van-calendar color="#00b26a" min-date="{{ minDate }}" show="{{ show }}" bind:close="onClose" bind:confirm="onConfirm" />
+<!-- 选填项 -->
+<text class="noRequire">以下为选填项</text>
+<!-- 身高 -->
+<van-field value="{{ high }}" clearable label="身高" placeholder="请输入身高cm" bind:change="onChangeHigh" />
+<!-- 体重 -->
+<van-field value="{{ weight }}" clearable label="体重" placeholder="请输入体重kg" bind:change="onChangeWeight" />
+<!-- BMI(系统自动计算) -->
+<van-field value="{{ bmiValue }}" readonly clearable label="BMI" placeholder="系统自动计算" bind:change="onChangeBMI" />
+<!-- 腰围 -->
+<van-field value="{{ fieldValueWaistline }}" is-link readonly label="腰围" placeholder="请选择腰围" bind:tap="onClickWaistline" />
+<van-popup show="{{ showWaistline }}" round position="bottom">
+  <van-cascader wx:if="{{ showWaistline }}" value="{{ cascaderValueWaistline }}" title="请选择腰围" options="{{ optionsWaistline }}" bind:close="onCloseWaistline" bind:finish="onFinishWaistline" />
+</van-popup>
+<text class="kong"></text>
+<!-- 吸烟史 -->
+<van-field value="{{ fieldValueSmoke }}" is-link readonly label="吸烟史" placeholder="请选择" bind:tap="onClickSmoke" />
+<van-popup show="{{ showSmoke }}" round position="bottom">
+  <van-cascader wx:if="{{ showSmoke }}" value="{{ cascaderValueSmoke }}" title="请选择腰围" options="{{ optionsSmoke }}" bind:close="onCloseSmoke" bind:finish="onFinishSmoke" />
+</van-popup>
+<!-- 饮酒史 -->
+<van-field value="{{ fieldValueDrink }}" is-link readonly label="饮酒史" placeholder="请选择" bind:tap="onClickDrink" />
+<van-popup show="{{ showDrink }}" round position="bottom">
+  <van-cascader wx:if="{{ showDrink }}" value="{{ cascaderValueDrink }}" title="请选择" options="{{ optionsDrink }}" bind:close="onCloseDrink" bind:finish="onFinishDrink" />
+</van-popup>
+<text class="kong"></text>
+<!-- 复选框 -->
+<!-- 肝功能 -->
+<view class="liver">
+  <text class="title">肝功能</text>
+  <picker type="{{'肝功能'}}" id="id1" sum="{{1}}" list="{{list_liver}}"></picker>
+</view>
+<view class="gap_line"></view>
+<!-- 肾功能 -->
+<view class="liver">
+  <text class="title">肾功能</text>
+  <picker type="{{'肾功能'}}" sum="{{1}}" list="{{list_liver}}"></picker>
+</view>
+<view class="gap_line"></view>
+<!-- 婚姻状况 -->
+<view class="liver">
+  <text class="title">婚姻状况</text>
+  <picker type="{{'婚姻状况'}}" sum="{{1}}" list="{{marriage}}"></picker>
+</view>
+<view class="gap_line"></view>
+<!-- 生育状态 -->
+<view class="liver_giveBirth">
+  <text class="title">生育状态</text>
+  <picker type="{{'生育状态'}}" sum="{{1}}" list="{{giveBirth}}"></picker>
+</view>
+<view class="gap_line"></view>
+<!-- 慢性病 -->
+<view class="liver">
+  <text class="title">慢性病</text>
+  <picker type="{{'慢性病'}}" sum="{{9}}" list="{{disease}}"></picker>
+</view>
+<view class="gap_line"></view>
+<!-- 家族病史 -->
+<view class="liver">
+  <text class="title">家族病史</text>
+  <picker type="{{'家族病史'}}" sum="{{18}}" list="{{famliyHistroy}}"></picker>
+</view>
+<view class="gap_line"></view>
+<!-- 药物过敏 -->
+<view class="liver">
+  <text class="title">药物过敏</text>
+  <picker type="{{'药物过敏'}}" sum="{{11}}" list="{{drugList}}"></picker>
+</view>
+<view class="gap_line"></view>
+<!-- 食物过敏 -->
+<view class="liver">
+  <text class="title">食物过敏</text>
+  <picker type="{{'食物过敏'}}" sum="{{11}}" list="{{foodList}}"></picker>
+</view>
+<view class="gap_line"></view>
+<!-- 个人习惯 -->
+<view class="liver">
+  <text class="title">个人习惯</text>
+  <picker type="{{'个人习惯'}}" sum="{{13}}" list="{{customList}}"></picker>
+  <view class="saveBtn" bindtap="saveUserMsg">
+    保存并返回
+  </view>
+  <view style="height: 3rem; background-color: #ffffff;">
+
+  </view>
+</view>

@@ -1,0 +1,21 @@
+<!--pages/my/MyAppointment/apointmentDetail/apointmentDetail.wxml-->
+<view class="detail">
+  <view class="des">
+    <text class="title">病情描述</text>
+    <view class="des-content">
+      {{item.desVal}}
+    </view>
+  </view>
+  <view class="hospitalDetail">
+    <text class="title">预约地点及时间</text>
+    <view class="des-content">
+      {{item.item.name + ' ' + item.item.dr}}
+      <view class="address">
+        {{item.item.hospital + ' ' + item.item.hospitalAddress}}
+      </view>
+      <view class="date">
+        {{item.date}}
+      </view>
+    </view>
+  </view>
+</view>

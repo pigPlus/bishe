@@ -1,0 +1,19 @@
+<!--pages/my/MyAppointment/MyAppointment.wxml-->
+<view wx:if="{{isShow}}">
+  <view class="list" wx:for="{{list}}" wx:key="index" data-item="{{item}}">
+    <view class="doctor-hospital" bindtap="apointmentDetail" data-item="{{item}}">
+      {{item.item.name + ' ' + item.item.hospital}}
+       <view class="right">
+      <van-icon class="_icon" name="ellipsis" />
+    </view>
+    </view>
+   
+    <view class="btn">
+      <van-button custom-class="custom-class" color="red" plain bindtap="cancelApointment" data-id="{{item._id}}">撤销申请</van-button>
+    </view>
+  </view>
+</view>
+<view class="onList" wx:else>
+  暂无记录~
+</view>
+<van-dialog id="van-dialog" />

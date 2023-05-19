@@ -1,0 +1,20 @@
+/* pages/index/doctorList/doctorList.wxss */
+.main-active-class {
+  border-color: #00b26a !important;
+}
+
+.content-active-class {
+  color: #00b26a !important;
+}
+
+.ai-chat {
+  position: fixed;
+  /* z-index: 10; */
+  right: 3rem;
+  bottom: 4rem;
+  width: 3rem;
+  height: 3rem;
+  border-radius: 50%;
+  background-color: #00b26a;
+  padding: .7rem;
+}

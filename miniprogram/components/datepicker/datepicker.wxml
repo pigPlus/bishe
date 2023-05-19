@@ -1,0 +1,6 @@
+<view class="container">
+  <van-cell title="选择时间" value="{{showDate}}" is-link bind:click="showPopup" />
+  <van-popup round custom-style="height: 40%" position="bottom" show="{{ show }}" bind:close="onClose">
+    <van-datetime-picker type="date" value="{{ currentDate }}" max-date="{{ maxDate }}" formatter="{{ formatter }}" bind:cancel="onCancelPicker" bind:confirm="onConfirmPicker" />
+  </van-popup>
+</view>

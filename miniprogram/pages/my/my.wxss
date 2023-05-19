@@ -1,0 +1,50 @@
+/* pages/my/my.wxss */
+.my_container {
+  width: 100%;
+  height: 100vh;
+  position: relative;
+}
+
+.login_wrap {
+  width: 17rem;
+  height: 3rem;
+  background-color: #00b26a;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  border-radius: .5rem;
+  display: flex;
+}
+
+text {
+  display: block;
+  line-height: 3rem;
+  color: #ffffff;
+  font-size: 1rem;
+}
+
+.user_wrap {
+  width: 100%;
+  background-color: #ffffff;
+  padding: 2rem;
+  display: flex;
+  margin-bottom: 1rem;
+}
+
+.avatarUrl {
+  display: block;
+  width: 5rem;
+  height: 5rem;
+}
+
+.loginAvatarUrl {
+  display: block;
+  width: 5rem;
+  height: 5rem;
+  margin-left: -5rem;
+}
+
+.nickname {
+  margin-left: 1rem;
+}

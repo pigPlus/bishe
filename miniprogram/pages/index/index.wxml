@@ -1,0 +1,46 @@
+<!--index.wxml-->
+<view class="container">
+  <view class="top">
+    <view class="left">
+      <view class="fast_inquiry" bindtap="toConsultation">
+        快速问诊
+        <!-- <view class="iconfont icon-xinxi1-copy"></view> -->
+        <image class="icon-3" src="{{src3}}" mode="" />
+      </view>
+    </view>
+    <view class="right">
+      <view class="appointment_consultation" bindtap="toReservation">
+        预约问诊
+        <image class="icon-1" src="{{src1}}" mode="" />
+      </view>
+      <view class="to_shop" bindtap="goToShop">购药商城
+        <image class="icon-2" src="{{src2}}" mode="" />
+      </view>
+    </view>
+  </view>
+  <view class="tabs">
+    <i-tabs current="{{ current_scroll }}" scroll bindchange="handleChangeScroll">
+      <i-tab i-class="myTab" wx:for="{{ch_type}}" wx:key="index" key="{{index}}" title="{{item}}"></i-tab>
+    </i-tabs>
+  </view>
+  <van-tabs color="#00b26a" line-width="30px" animated swipeable active="{{ active }}" bind:change="onChange">
+    <van-tab title="{{item}}" wx:for="{{ch_type}}" wx:key="index">
+      <!-- <newsPanel title="{{title}}"></newsPanel> -->
+      <view class="newsPanel">
+        <view class="panel_item" wx:for="{{list}}" wx:key="index" bindtap="newsContent" data-id="{{item._id}}">
+          <!-- <view class="article_img">
+            <img src="https://resource.chunyu.mobi/@/media/images/news/151079_55e13c0902dc1ad3.png" alt=""/>
+            {{item['文章内图片']}}
+          </view> -->
+          <view class="article_title">
+            {{item['文章标题']}}
+          </view>
+          <view class="other_msg">
+            <view class="ty">{{item['文章分类']}}</view>
+            <view class="ti">{{item['发布时间']}}</view>
+          </view>
+        </view>
+      </view>
+    </van-tab>
+  </van-tabs>
+</view>

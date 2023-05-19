@@ -1,0 +1,14 @@
+<!--pages/shop/shop.wxml-->
+<!-- <van-search value="{{ value }}" placeholder="请输入搜索关键词" bind:change="handleSearch" /> -->
+<view class="_search">
+  <van-search value="{{ value }}" placeholder="请输入搜索关键词" use-action-slot bind:change="onChange">
+    <view style="margin-left: .5rem;" slot="action" bind:tap="onClick">搜索</view>
+  </van-search>
+</view>
+
+<view wx:if="{{!isShow}}">
+  <van-card wx:for="{{ goodsList }}" wx:key="index" price="{{ item.options[0].price }}" title="{{ item.name }}" thumb="{{ item.url }}" data-id="{{item._id}}" price-class="price-class" bindtap="handleGoods" />
+</view>
+<view wx:else class="noDrug">
+  没有搜索到~
+</view>

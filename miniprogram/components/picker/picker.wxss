@@ -1,0 +1,10 @@
+/* components/picker/picker.wxss */
+.pub {
+  display: flex !important;
+  flex-direction: row;
+  flex-wrap: wrap;
+}
+
+.pub van-checkbox {
+  margin: 1rem;
+}

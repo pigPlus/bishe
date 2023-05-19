@@ -1,0 +1,47 @@
+/* pages/weight/weight.wxss */
+.number_message {
+  background-color: #ffffff;
+  padding: 1.5rem;
+  padding-bottom: 2rem;
+  margin-bottom: 2rem;
+}
+
+.number {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+
+.message {
+  width: 100%;
+}
+
+._font {
+  font-weight: bolder;
+  font-size: 1.8rem;
+  text-align: center;
+}
+
+.develop {
+  text-align: center;
+  margin-top: -2rem;
+}
+
+
+.sportsEcharts {
+  width: 100%;
+  display: inline-block;
+  text-align: center;
+  position: relative;
+  left: 50%;
+  transform: translateX(-50%);
+  margin: -4rem 0rem 1rem 0rem;
+}
+
+.echarts_title {
+  display: block;
+  margin-bottom: -1rem;
+  margin-top: 1rem;
+  margin-left: 1rem;
+  position: relative;
+}

@@ -1,0 +1,38 @@
+/* pages/order/addressList/addressList.wxss */
+.address-wrap {
+  background-color: #ffffff;
+  padding: 1rem;
+  margin: 1rem;
+  border-radius: .2rem;
+  display: flex;
+
+}
+
+.address-wrap>view {
+  flex-grow: 1;
+}
+
+.top {
+  display: flex;
+  font-weight: 700;
+}
+
+.name {
+  margin-right: .5rem;
+}
+
+.address {
+  margin-top: .5rem;
+  color: rgb(104, 103, 103);
+}
+
+.right {
+  position: relative;
+}
+
+._icon {
+  position: absolute;
+  right: 0;
+  top: 50%;
+  transform: translateY(-50%);
+}

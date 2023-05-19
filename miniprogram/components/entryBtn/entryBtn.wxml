@@ -1,0 +1,4 @@
+<!--components/entryBtn/entryBtn.wxml-->
+<view class="entry_container">
+  {{content}}
+</view>

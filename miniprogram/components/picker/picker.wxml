@@ -1,0 +1,7 @@
+<!--components/picker/picker.wxml-->
+<van-checkbox-group value="{{ result }}" bind:change="onChangeLiver" max="{{ sum }}">
+  <view class="pub">
+    <van-checkbox class="box" checked-color="#00b26a" name="{{index}}" wx:for="{{list}}" wx:key="index">{{item}}</van-checkbox>
+  </view>
+
+</van-checkbox-group>

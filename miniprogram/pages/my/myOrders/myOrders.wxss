@@ -1,0 +1,51 @@
+/* pages/my/myOrders/myOrders.wxss */
+.orderList {
+  padding: 1rem;
+}
+
+.goodsList {
+  padding: 1rem;
+  background-color: #ffffff;
+  border-radius: .2rem;
+  position: relative;
+}
+
+.name {
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+}
+
+.optionName {
+  color: rgba(116, 113, 113, .8);
+  font-size: .8rem;
+}
+
+.optionNum {
+  color: rgba(116, 113, 113, .8);
+  font-size: .8rem;
+}
+
+/* .btn {
+  position: absolute;
+  right: 1rem;
+  bottom: 1rem;
+} */
+
+.custom-class {
+  width: 6rem !important;
+  height: 2rem !important;
+  margin: .5rem .3rem 0rem 0rem;
+}
+
+.onOrder {
+  color: rgb(155, 153, 153);
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.onOrder_text {
+  margin-top: -20rem;
+}

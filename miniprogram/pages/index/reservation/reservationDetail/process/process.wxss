@@ -1,0 +1,41 @@
+/* pages/index/reservation/reservationDetail/process/process.wxss */
+.wrap {
+  height: 100vh;
+}
+
+._textarea {
+  display: block;
+  width: 100%;
+  padding: .5rem;
+  background-color: #ffffff;
+  height: 20%;
+}
+
+.upload-img {
+  background-color: #ffffff;
+  height: 10%;
+  padding: 0 0 1rem 1rem;
+}
+
+.upload-img-text {
+  color: rgb(168, 165, 165);
+}
+
+.address-date {
+  background-color: #ffffff;
+  margin-top: 1rem;
+  padding: 1rem;
+  color: rgb(124, 121, 121);
+}
+
+.title {
+  display: block;
+  margin-bottom: .5rem;
+  font-size: 1.15rem;
+  color: rgb(44, 44, 44);
+}
+
+.entryBtn {
+  display: block;
+  margin-top: 4rem;
+}

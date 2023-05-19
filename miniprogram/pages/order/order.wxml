@@ -1,0 +1,36 @@
+<!--pages/order/order.wxml-->
+<view>
+  <view class="top" bindtap="handleAddress">
+    <view class="left">
+      <van-icon class="_icon" name="location" />
+    </view>
+    <view class="mid">
+      <view class="address">
+        {{param.address}}
+      </view>
+      <view class="name">
+        {{param.name}}
+      </view>
+      <view class="phone">
+        {{param.phone}}
+      </view>
+    </view>
+    <view class="right">
+      <van-icon name="arrow" color="rgb(163, 160, 160)" />
+    </view>
+  </view>
+  <view class="order-list">
+    <view class="order-item" wx:for="{{list}}" wx:key="index">
+      <view class="oneLine">
+        {{item.name}}
+      </view>
+      <view class="optionName">
+        {{item.option.name}}
+      </view>
+      <view class="optionNum">
+        {{'数量: ' + item.num}}
+      </view>
+    </view>
+  </view>
+  <van-submit-bar price-class="price-class" button-class="button-class" price="{{ total * 100 }}" button-text="去支付" bind:submit="onSubmit" />
+</view>

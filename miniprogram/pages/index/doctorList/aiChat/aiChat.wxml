@@ -1,0 +1,22 @@
+<!--pages/index/doctorList/aiChat/aiChat.wxml-->
+<!-- ai对话 -->
+<view class="chatContent">
+  <view class="msgList" wx:for="{{msgList}}" wx:key="index">
+    <view class="msg-item">
+      <van-icon custom-class="icon-class-left" name="play" />
+      {{item.msg}}
+    </view>
+  </view>
+  <view style="height: 5rem;" class="gap">
+    <!-- loading -->
+    <view class="_loading" wx:if="{{isLoading}}">
+      <van-loading custom-class="custom-class-isLoading" color="#00b26a" type="spinner" size="1rem" vertical>加载中...</van-loading>
+    </view>
+    <!-- 输入框 -->
+    <view class="chat-input-wrap">
+      <van-field value="{{ value }}" placeholder="请输入内容" border="{{ false }}" bind:change="onChange" input-class="input-class" />
+      <van-button custom-class="custom-class" class="chat-btn" type="primary" bindtap="send">发送</van-button>
+    </view>
+  </view>
+
+</view>

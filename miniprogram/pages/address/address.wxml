@@ -1,0 +1,23 @@
+<!--pages/address/address.wxml-->
+<view>
+  <view bindtap="handleAddress" class="address-wrap" wx:for="{{addressList}}" wx:key="index" data-item="{{item}}">
+    <view class="left">
+      <view class="top">
+        <view class="name">
+          {{item.name}}
+        </view>
+        <view class="phone">
+          {{item.phone}}
+        </view>
+
+      </view>
+      <view class="address">
+        {{item.address}}
+      </view>
+    </view>
+    <view class="right">
+      <van-icon class="_icon" name="ellipsis" />
+    </view>
+  </view>
+  <entryBtn content="添加收获地址" bindtap="addAddress"></entryBtn>
+</view>

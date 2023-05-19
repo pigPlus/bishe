@@ -1,0 +1,106 @@
+/* pages/newBuilt/newBuilt.wxss */
+.van-radio-group {
+  background-color: #ffffff;
+  display: flex;
+  height: 2rem;
+  padding: .4rem;
+}
+
+.sex_lable {
+  line-height: 2rem;
+  color: #08121b;
+  font-size: small;
+  margin-left: .5rem;
+  margin-right: 2.5rem;
+}
+
+.van-radio {
+  margin-left: 2rem;
+  margin-top: .3rem;
+}
+
+.require {
+  display: inline;
+  height: 1.5rem;
+  background-color: transparent;
+  color: rgb(185, 183, 183);
+  font-size: .9rem;
+  margin: .4rem .5rem .1rem .5rem;
+}
+
+.must {
+  color: rgb(209, 39, 39);
+  display: inline;
+  font-size: 1.2rem;
+}
+
+.noRequire {
+  display: block;
+  height: 1.5rem;
+  background-color: transparent;
+  color: rgb(185, 183, 183);
+  font-size: .9rem;
+  margin: .4rem .5rem .1rem .5rem;
+}
+
+.kong {
+  display: block;
+  background-color: transparent;
+  height: 0.5rem;
+}
+
+.liver {
+  background-color: #ffffff;
+  /* height: 5rem; */
+  padding: .2rem;
+  display: block;
+}
+
+.liver_giveBirth {
+  background-color: #ffffff;
+  border-bottom: 1px solid transparent;
+  padding: .2rem;
+}
+
+/* 肝功能 */
+.title {
+  display: inline-block;
+  font-size: .88rem;
+  color: #646566;
+  margin: .3rem .8rem;
+}
+
+.sex_lable {
+  display: inline-block;
+  font-size: .88rem;
+  color: #646566;
+  margin: .3rem .6rem;
+  margin-right: 2.5rem;
+}
+
+.van-cell__title {
+  display: inline-block;
+  font-size: .88rem;
+  color: #646566;
+}
+
+picker {
+  margin: .2rem .6rem;
+}
+
+.saveBtn {
+  width: 70%;
+  height: 3rem;
+  color: #ffffff;
+  background-color: #00b26a;
+  margin-top: 2rem;
+  border-radius: .3rem;
+  text-align: center;
+  line-height: 3rem;
+  margin-left: 3.5rem;
+}
+
+.gap_line {
+  height: .5rem;
+  background-color: #f6f6f6;
+}

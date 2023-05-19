@@ -1,0 +1,44 @@
+<!--pages/weight/weight.wxml-->
+
+<view>
+  <van-notify id="van-notify" />
+  <view class="number_message">
+    <view class="number">
+      <view class="weight_number _font">
+        {{weight}}
+        <text style="font-size: small; font-weight: lighter; display: block; color: rgb(104, 103, 103); text-align: center;">体重{{'(' + 'kg' + ')'}}</text>
+      </view>
+      <text style="margin: .5rem 4.5rem 0rem 4.5rem; color: rgb(219, 218, 218);">|</text>
+      <view class="bmi_number _font">
+        {{BMI}}
+        <text style="font-size: small; font-weight: lighter; display: block; color: rgb(104, 103, 103); text-align: center;">BMI</text>
+      </view>
+    </view>
+    <view class="message">
+      <view style="display: flex; flex-direction: column; background-color: #f7f7f7; padding: 1rem; margin: 2rem 0rem; ; overflow: {{dom_overflow}}; height: {{dom_height}};">
+        <text style="font-weight: bolder; margin: 0rem 0rem .5rem 0rem; display: inline-block;">{{analyseWeightRes}}</text>
+        <view style="height: .1rem;"></view>
+        {{text}}
+      </view>
+      <view wx:if="{{icon_visible}}" class="develop" bindtap="handleDevelop">
+        <van-icon class="_arrow" name="arrow-down" />
+      </view>
+      <view class="develop" wx:else="{{!icon_visible}}" bindtap="handleDevelopBack">
+        <van-icon class="_arrow" name="arrow-up" />
+      </view>
+    </view>
+    <!-- <view style="height: 1rem; background-color: #ffffff; margin: 0rem -2rem;"></view> -->
+
+    <!-- <view style="height: 5rem; background-color: #f6f6f6; margin: 0rem -2rem;"></view> -->
+  </view>
+
+  <!-- echarts -->
+  <text style="z-index: 10;" class="echarts_title">(体重/kg)</text>
+  <view class="sportsEcharts">
+    <sportsEcharts wx:if="{{echartsVisible}}">
+    </sportsEcharts>
+  </view>
+
+
+  <entryBtn content="录入体重" bindtap="addWeight"></entryBtn>
+</view>

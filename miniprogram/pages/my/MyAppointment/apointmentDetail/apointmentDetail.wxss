@@ -1,0 +1,21 @@
+/* pages/my/MyAppointment/apointmentDetail/apointmentDetail.wxss */
+.title {
+  font-size: 1.1rem;
+  display: block;
+  margin-bottom: .5rem;
+}
+
+.des-content {
+  color: rgb(126, 126, 126);
+}
+
+.des {
+  background-color: #ffffff;
+  margin-bottom: 1rem;
+  padding: 1rem;
+}
+
+.hospitalDetail {
+  background-color: #ffffff;
+  padding: 1rem;
+}

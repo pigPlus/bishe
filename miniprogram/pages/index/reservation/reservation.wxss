@@ -1,0 +1,55 @@
+/* pages/index/reservation/reservation.wxss */
+.main-active-class {
+  border-color: #00b26a !important;
+}
+
+.content-active-class {
+  color: #00b26a !important;
+}
+
+.wrap {
+  display: flex;
+  justify-content: center;
+}
+
+.doctorList {
+  padding: 1rem;
+  background-color: #ffffff;
+  width: 85%;
+  margin: 1rem;
+  border-radius: .2rem;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+
+.name {
+  font-size: 1.5rem;
+  font-weight: 700;
+  margin-bottom: .5rem;
+}
+
+.department {
+  margin-bottom: .5rem;
+}
+
+.hospital {
+  margin-bottom: .5rem;
+}
+
+.tags {
+  margin: .2rem !important;
+}
+
+
+.right {
+  writing-mode: vertical-lr;
+  flex: 1;
+  color: #00b26a;
+}
+
+.__text {
+  color: rgb(139, 139, 139);
+  text-align: center;
+  margin-top: 10rem;
+}

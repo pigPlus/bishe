@@ -1,0 +1,6 @@
+{
+  "usingComponents": {
+    "sportsEcharts": "../../components/sportsEcharts/sportsEcahrts",
+    "entryBtn": "../../components/entryBtn/entryBtn"
+  }
+}

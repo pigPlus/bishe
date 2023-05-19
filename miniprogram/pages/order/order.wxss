@@ -1,0 +1,86 @@
+/* pages/order/order.wxss */
+.top {
+  display: flex;
+  background-color: #ffffff;
+  padding: 1.5rem 1rem;
+  margin: 1rem;
+  border-radius: .3rem;
+}
+
+.left {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* ._icon {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+} */
+
+.mid {
+  flex: 6;
+}
+
+.name {
+  display: inline;
+  color: rgb(102, 100, 100);
+  font-size: .9rem;
+}
+
+.phone {
+  display: inline;
+  color: rgb(102, 100, 100);
+  font-size: .9rem;
+}
+
+.right {
+  flex: .5;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.address {
+  font-weight: 800;
+  font-size: large;
+}
+
+.order-list {
+  background-color: #ffffff;
+  padding: .5rem 1rem;
+  margin: 1rem;
+  border-radius: .3rem;
+}
+
+.price-class {
+  color: #00b26a !important;
+}
+
+.button-class {
+  background-color: #00b26a !important;
+  border: 0 !important;
+}
+
+.oneLine {
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+}
+
+.order-item {
+  margin: 1rem 0rem;
+}
+
+.optionName {
+  color: rgb(139, 136, 136);
+  margin: .5rem .3rem;
+}
+
+.optionNum {
+  color: rgb(139, 136, 136);
+  margin: .5rem .3rem;
+}
