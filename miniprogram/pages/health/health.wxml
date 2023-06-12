@@ -94,14 +94,13 @@
       </view>
     </view>
   </view>
-  <!-- 这是个问题, 遮罩层不能全屏 -->
   <!-- <view style="height: 50rem; background-color: aliceblue;" class="ll">
 
   </view> -->
 </view>
 
 <!-- 发帖 -->
-<!-- <view class="__title">
+<view class="__title">
   社区
   <text class="__content">话题热聊中, 就差你了~</text>
 </view>
@@ -113,8 +112,8 @@
         <view>
           <van-icon name="smile-o" />
           {{item.posts}}
-        </view> -->
-<!-- <view class="follows" wx:for="{{item.follows}}">
+        </view>
+        <view class="follows" wx:for="{{item.follows}}">
           <view>
             <van-icon name="smile-o" />
             {{item.posts}}
@@ -125,21 +124,26 @@
               {{item.posts}}
             </view>
           </view>
-        </view> -->
-<!-- </view>
-    </view> -->
+        </view>
+      </view>
+    </view>
 
-<!-- <view class="comment-icon" bindtap="toCommit" data-item="{{item}}">
+    <view class="comment-icon" bindtap="toCommit" data-item="{{item}}">
       <van-icon name="comment-o" color="rgb(121, 116, 116)" />
-    </view> -->
-<!-- 评论框 -->
-<!-- <van-field wx:if="{{isInputShow}}" class="__input" value="{{ inputValue }}" placeholder="请输入内容" border="{{ false }}" bind:change="onInputChange" />
+    </view>
+    <!-- 评论框 -->
+    <van-field wx:if="{{isInputShow}}" class="__input" value="{{ inputValue }}" placeholder="请输入内容" border="{{ false }}" bind:change="onInputChange" />
     <van-button class="__btn" wx:if="{{isInputShow}}" size="small" type="primary" plain bindtap="cancelCommit">取消</van-button>
     <van-button class="__btn" wx:if="{{isInputShow}}" size="small" type="primary" bindtap="Commit" data-item="{{item}}">评论</van-button>
   </view>
 </view>
 <view class="addPost">
-  <van-button plain type="primary" custom-class="custom-class-btn">发帖
+  <van-button plain type="primary" custom-class="custom-class-btn" bindtap="putPosts">发帖
     <van-icon name="edit" />
   </van-button>
-</view> -->
+</view>
+<view class="input_posts">
+  <van-field wx:if="{{InputPostsShow}}" class="InputPosts" value="{{ InputPostsValue }}" placeholder="请输入内容" border="{{ false }}" bind:change="onInputPostsValueChange" />
+  <van-button wx:if="{{InputPostsShow}}" class="__btn" size="small" type="primary" plain bindtap="cancel">取消</van-button>
+  <van-button wx:if="{{InputPostsShow}}" class="__btn" size="small" type="primary" bindtap="put" data-item="{{item}}">发布</van-button>
+</view>

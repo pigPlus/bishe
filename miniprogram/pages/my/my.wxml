@@ -19,4 +19,7 @@
   <van-cell wx:if="{{avatarUrlVisible}}" is-link title="问诊记录" link-type="navigateTo" url="/pages/my/ConsultationRecord/ConsultationRecord" />
   <!-- 预约 -->
   <van-cell wx:if="{{avatarUrlVisible}}" is-link title="我的预约" link-type="navigateTo" url="/pages/my/MyAppointment/MyAppointment" />
+  <!-- 退出 -->
+  <van-cell wx:if="{{avatarUrlVisible}}" title="退出登录" bindtap="signOut"/>
 </view>
+<van-dialog id="van-dialog" />

@@ -16,7 +16,9 @@ Page({
     lastSleepTime: 0,
     postList: [],
     isInputShow: false,
-    inputValue: ''
+    inputValue: '',
+    InputPostsShow: false,
+    InputPostsValue: ''
   },
   onLoad() {
     if (typeof this.getTabBar === 'function' && this.getTabBar()) {
@@ -64,7 +66,7 @@ Page({
     wx.cloud.callFunction({
       name: 'getPosts',
       success: res => {
-        // console.log(res.result.data);
+         //console.log(res.result.data);
         this.setData({
           postList: res.result.data
         })
@@ -155,6 +157,38 @@ Page({
           isInputShow: false
         })
         this.getPosts()
+      },
+      fail: err => {
+        console.log(err);
+      }
+    })
+  },
+  putPosts() {
+    this.setData({
+      InputPostsShow: true
+    })
+  },
+  onInputPostsValueChange(e) {
+    this.setData({
+      InputPostsValue: e.detail
+    })
+  },
+  cancel() {
+    this.setData({
+      InputPostsShow: false
+    })
+  },
+  put() {
+    wx.cloud.callFunction({
+      name: 'addPost',
+      data: {
+        value: this.data.InputPostsValue
+      },
+      success: res => {
+        this.getPosts()
+        this.setData({
+          InputPostsShow: false
+        })
       },
       fail: err => {
         console.log(err);

@@ -1,4 +1,5 @@
 const app = getApp()
+import Dialog from '@vant/weapp/dialog/dialog';
 Page({
   data: {
     visible: true,
@@ -83,5 +84,21 @@ Page({
         console.log('err');
       }
     })
+  },
+  signOut() {
+    Dialog.confirm({
+        title: '退出',
+        message: '确认退出吗？',
+      })
+      .then(() => {
+        // on confirm
+        wx.removeStorageSync('userInfo')
+        this.setData({
+          avatarUrlVisible: false
+        })
+      })
+      .catch(() => {
+        // on cancel
+      });
   }
 })
